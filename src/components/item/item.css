@@ -1,0 +1,114 @@
+.trackerItem {
+  margin-left: 25px;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 90% -5%;
+}
+
+.trackerItem:nth-child(1),
+.trackerItem:nth-child(2),
+.trackerItem:nth-child(3) {
+  margin-bottom: 25px;
+}
+
+.trackerInfo {
+  position: absolute;
+  bottom: 0;
+  height: 80%;
+  width: 100%;
+  border-radius: 19px;
+  background-color: var(--Dark-blue);
+  color: #fff;
+}
+
+.trackerInfo:hover {
+  background-color: var(--Item-Hover);
+}
+
+.trackerInfo .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 35px;
+}
+
+.trackerInfo .body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 35px;
+}
+.trackerInfo .hours {
+  font-size: 40px;
+  font-weight: lighter;
+  margin-bottom: 15px;
+}
+
+.trackerInfo .prevLog {
+  font-size: .75rem;
+  font-weight: lighter;
+  text-transform: capitalize;
+  color: var(--Pale-Blue);
+}
+
+.trackerItem.Work {
+  background-image: url('../../images/icon-work.svg');
+  background-color: var(--Light-red-work);
+}
+.trackerItem.Play {
+  background-image: url('../../images/icon-play.svg');
+  background-color: var(--Soft-blue-play);
+}
+.trackerItem.Study {
+  background-image: url('../../images/icon-study.svg');
+  background-color: var(--Light-red-study);
+}
+.trackerItem.Exercise {
+  background-image: url('../../images/icon-exercise.svg');
+  background-color: var(--Lime-green-exercise);
+}
+.trackerItem.Social {
+  background-image: url('../../images/icon-social.svg');
+  background-color: var(--Violet-social);
+}
+.trackerItem.Self.Care {
+  background-image: url('../../images/icon-self-care.svg');
+  background-color: var(--Soft-orange-self-care);
+}
+
+.ellipsisContainer {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .trackerItem {
+    height: 160px;
+    margin-left: 0;
+    margin-bottom: 25px;
+    max-width: 375px;
+  }
+  .trackerInfo .hours {
+    font-size: 1.5rem;
+  }
+  .trackerInfo .body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 35px;
+  }
+  .trackerInfo .prevLog {
+    font-size: .7rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+  .trackerInfo .header {
+    font-size: 0.9rem;
+  }
+  .trackerInfo .hours {
+    margin-bottom: 0;
+    font-size: 2rem;
+  }
+}
